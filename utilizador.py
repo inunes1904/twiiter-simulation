@@ -14,10 +14,12 @@ class Utilizador:
         self.descricao = descricao
         Utilizador.add_user(self)
 
-    def verfificar_user(utilizador, password):
+    def verfificar_user(handle, password):
+        utilizador = ""
         for user in Utilizador.lista_utilizadores:
-            if user.handle == utilizador and user.password == password:
-                return True, user
-            else:
-                return False
+            if user.handle == handle and user.password == password:
+                utilizador = user
+        return False if not utilizador else True, utilizador 
+       
+            
 

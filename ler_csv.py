@@ -9,5 +9,6 @@ def ler_utilizadores():
                                      nome_completo=user['Nome_Completo'],
                                      descricao=user['Descricao'],
                                      password=user['Password'])
+    
         
         

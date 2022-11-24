@@ -19,8 +19,13 @@ def menu2():
 
 def menu3(): 
     print('████████████████████████████████████████████\n')
+    print('████████████    TWEETS MENU   ██████████████\n')
     print('███         1 - Listar Tweets            ███\n')
     print('███         2 - Adicionar Tweet          ███\n')
     print('███         3 - Remover Tweet            ███\n')
     print('███         0 - Sair do Twitter          ███\n')
+    print('████████████████████████████████████████████\n')
+    print('████████████     USER MENU    ██████████████\n')
+    print('███         4 - Modificar Utilizador     ███\n')
+    print('███         5 - Apagar Twitter           ███\n')
     print('████████████████████████████████████████████\n')
