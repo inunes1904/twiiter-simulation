@@ -54,7 +54,7 @@ def switch_twitter(selecao, user):
         case 2:
             tweets = ler_tweets()
             texto = input('Introduza o texto do tweet: ') 
-            visibilidade = input('Digite Pub para Publico ou Priv Privado:').lower()
+            visibilidade = input('Digite "Pub" para Publico ou "Priv" Privado:').lower()
             if visibilidade == 'pub':
                 visibilidade = 'Publico'
             else:
@@ -116,8 +116,11 @@ def switch_twitter(selecao, user):
             print('Todos os seus Tweets e informação será removida\n')
             decisao = input('Digite "s" para eliminar a conta "n" para cancelar: ').lower()
             if decisao == 's':
-                tweets['tweets'] = [ tw for tw in tweets['tweets'] if  tw['handle'] != user.handle]
-                escrever_tweets(tweets)
+                try:
+                    tweets['tweets'] = [ tw for tw in tweets['tweets'] if  tw['handle'] != user.handle]
+                    escrever_tweets(tweets)
+                except:
+                    print('\nUtilizador sem Tweets apenas iremos remover a conta.\n')
                 if user:
                     Utilizador.lista_utilizadores.remove(user)
                 escrever_utilizadores()

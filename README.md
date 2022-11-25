@@ -1,2 +1,2 @@
 # twiiter-simulation
-Programa simples que simula o Twitter na consola.
+Simple program that simulates a Twitter in a Console application
